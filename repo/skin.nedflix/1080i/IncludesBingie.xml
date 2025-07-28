@@ -401,52 +401,14 @@
 	  <include>Default_Visible_Fade</include>
 	  <control type="image">
 		<!-- Only draw the icon after ListItem.Label is non-empty (i.e. item metadata is loaded) -->
-		<visible>!String.IsEmpty(ListItem.Label) + !String.IsEmpty(ListItem.Year)</visible>
+		<visible>!String.IsEmpty(ListItem.Label) + !String.Contains(ListItem.Title, next page>>>) + !String.Contains(ListItem.Label, next page)</visible>
 		<width>56</width>
 		<height>50</height>
 		<aspectratio>keep</aspectratio>
 		<texture>$VAR[mediaflags_test_UK_icons]</texture>
 		<include>Default_Visible_Fade</include>
-	  </control>
-	  
-	  <include>Default_Visible_Fade</include>
-	  <control type="image">
-		<!-- Only draw the icon after ListItem.Label is non-empty (i.e. item metadata is loaded) -->
-		<visible>Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, collision)</visible>
-		<width>56</width>
-		<height>50</height>
-		<aspectratio>keep</aspectratio>
-		<texture>flags/flags_color/mpaa/bbfc_15_certificate_uk.png</texture>
-		<include>Default_Visible_Fade</include>
-	  </control>
-	  
-	  <include>Default_Visible_Fade</include>
-	  <control type="image">
-		<!-- Only draw the icon after ListItem.Label is non-empty (i.e. item metadata is loaded) -->
-		<visible>Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, dynamite)</visible>
-		<width>56</width>
-		<height>50</height>
-		<aspectratio>keep</aspectratio>
-		<texture>flags/flags_color/mpaa/bbfc_15_certificate_uk.png</texture>
-		<include>Default_Visible_Fade</include>
-	  </control>
-	  
-	  <include>Default_Visible_Fade</include>
-	  <control type="image">
-		<!-- Only draw the icon after ListItem.Label is non-empty (i.e. item metadata is loaded) -->
-		<visible>Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + !String.Contains(ListItem.Title, dynamite) + !String.Contains(ListItem.Title, collision)</visible>
-		<width>56</width>
-		<height>50</height>
-		<aspectratio>keep</aspectratio>
-		<texture>flags/flags_color/mpaa/bbfc_18_certificate_uk.png</texture>
-		<include>Default_Visible_Fade</include>
-	  </control>
-	  
+	  </control>	  
 	</include>
-	
-	
-
-
 			
 	<!-- MPAA Color Icons -->
     <include name="MPAA_Details_RowUS">
@@ -1077,21 +1039,34 @@
     </variable>
 
 	<!-- Choose Year / Premiered -->
-	<variable name="YearOrPremiered">
-		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, collision)">2023</value>
-		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, dynamite)">2019</value>
-		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + !String.Contains(ListItem.Title, collision) + !String.Contains(ListItem.Title, dynamite) + String.Contains(ListItem.Title, 2019)">2019</value>
-		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + !String.Contains(ListItem.Title, collision) + !String.Contains(ListItem.Title, dynamite) + String.Contains(ListItem.Title, 2020)">2020</value>
-		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + !String.Contains(ListItem.Title, collision) + !String.Contains(ListItem.Title, dynamite) + String.Contains(ListItem.Title, 2021)">2021</value>
-		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + !String.Contains(ListItem.Title, collision) + !String.Contains(ListItem.Title, dynamite) + String.Contains(ListItem.Title, 2022)">2022</value>
-		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + !String.Contains(ListItem.Title, collision) + !String.Contains(ListItem.Title, dynamite) + String.Contains(ListItem.Title, 2023)">2023</value>
-		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + !String.Contains(ListItem.Title, collision) + !String.Contains(ListItem.Title, dynamite) + String.Contains(ListItem.Title, 2024)">2024</value>
-		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + !String.Contains(ListItem.Title, collision) + !String.Contains(ListItem.Title, dynamite) + String.Contains(ListItem.Title, 2025)">2025</value>
-		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + !String.Contains(ListItem.Title, collision) + !String.Contains(ListItem.Title, dynamite) + String.Contains(ListItem.Title, 2026)">2026</value>
-		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + !String.Contains(ListItem.Title, collision) + !String.Contains(ListItem.Title, dynamite) + String.Contains(ListItem.Title, 2027)">2027</value>
-		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + !String.Contains(ListItem.Title, collision) + !String.Contains(ListItem.Title, dynamite) + String.Contains(ListItem.Title, 2028)">2028</value>
-		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + !String.Contains(ListItem.Title, collision) + !String.Contains(ListItem.Title, dynamite) + String.Contains(ListItem.Title, 2029)">2029</value>
-		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + !String.Contains(ListItem.Title, collision) + !String.Contains(ListItem.Title, dynamite) + String.Contains(ListItem.Title, 2030)">2030</value>		
+	<variable name="YearOrPremiered">		
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, 2019)">2019</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, 2020)">2020</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, 2021)">2021</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, 2022)">2022</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, 2023)">2023</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, 2024)">2024</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, 2025)">2025</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, 2026)">2026</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, 2027)">2027</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, 2028)">2028</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, 2029)">2029</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, 2030)">2030</value>		
+		
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, 2019)">2019</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, 2020)">2020</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, 2021)">2021</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, 2022)">2022</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, 2023)">2023</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, 2024)">2024</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, 2025)">2025</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, 2026)">2026</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, 2027)">2027</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, 2028)">2028</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, 2029)">2029</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, 2030)">2030</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, lfg s01)">2025</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, greatest moments s01)">2025</value>
 		<value condition="[$EXP[IsMovieDBType] + Skin.HasSetting(AirDateMovies)] | [$EXP[IsTvShowDBType] + Skin.HasSetting(AirDateShows)] | [$EXP[IsSeasonDBType] + Skin.HasSetting(AirDateSeasons)] | [$EXP[IsEpisodeDBType] + Skin.HasSetting(AirDateEpisodes)]">$VAR[GetPremiered]</value>
 		<value>$VAR[GetYear]</value>
 	</variable>
@@ -1164,9 +1139,21 @@
     <variable name="GetDuration">
 	
         <!-- Wrestling -->
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, raw)">2h</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, smackdown)">2h</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, main event) + !String.Contains(ListItem.Title, saturday)">55m</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, main event) + String.Contains(ListItem.Title, saturday)">2h</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, nxt -)">1h 30m</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, nxt) + !String.Contains(ListItem.Title, nxt -)">2-3h</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, evolve)">50m</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, lfg)">1h</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, greatest moments)">21m</value>		
 		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, collision)">2h</value>
 		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, dynamite)">2h</value>
 		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + !String.Contains(ListItem.Title, dynamite) + !String.Contains(ListItem.Title, collision)">3-4h</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + !String.Contains(ListItem.Title, -) + String.Contains(ListItem.Title, 2025)">3-4h</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, -) + String.Contains(ListItem.Title, 2025)">3-4h</value>
+
         <!-- normal -->
         <value condition="Integer.IsGreater(ListItem.Duration(h),0)">$INFO[ListItem.Duration(h),,h ]$INFO[ListItem.Duration(m),,m]</value>
         <value condition="!String.IsEmpty(ListItem.Duration) + Integer.IsEqual(ListItem.Duration(h),0)">$INFO[ListItem.Duration(mins),,m]</value>
@@ -1535,7 +1522,10 @@
     </variable>
 
     <!-- Bingie More Details (pseudo-random) -->
-    <variable name="BingieMoreDetails">		
+    <variable name="BingieMoreDetails">
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, dynamite)">It's Wednesday, you know what that means!</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, collision)">Saturday night's alright for fighting!</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + !String.Contains(ListItem.Title, dynamite) + !String.Contains(ListItem.Title, collision)">It's a Pay-Per-View BAY BAY!</value>
         <value condition="!Window.IsActive(1120) + Integer.IsLessOrEqual(System.Time(ss),15) + !String.IsEmpty(Container(99950).ListItem.Property(Awards))">$INFO[Container(99950).ListItem.Property(Awards)]</value>       
         <value condition="!Window.IsActive(1120) + Integer.IsLessOrEqual(System.Time(ss),30) + !String.IsEmpty(Container(99950).ListItem.Director) + !String.IsEmpty(Container(99950).ListItem.Cast) + $EXP[IsMovieDBType]">$INFO[Container(99950).ListItem.Director,$LOCALIZE[31541] ] $LOCALIZE[31149] $INFO[Container(99950).ListItem.Property(cast.1.name)]$INFO[Container(99950).ListItem.Property(cast.2.name),$COMMA ,]$INFO[Container(99950).ListItem.Property(cast.3.name),$COMMA ,]$INFO[Container(99950).ListItem.Property(cast.4.name), $LOCALIZE[31150] ] $LOCALIZE[31545].</value>	
 		<value condition="!Window.IsActive(1120) + Integer.IsLessOrEqual(System.Time(ss),30) + !String.IsEmpty(Container(99950).ListItem.Property(Network.1.name)) + !String.IsEmpty(Container(99950).ListItem.Cast) + !$EXP[IsMovieDBType]">$INFO[Container(99950).ListItem.Property(Network.1.name)] $LOCALIZE[31546] $INFO[Container(99950).ListItem.Property(cast.1.name)]$INFO[Container(99950).ListItem.Property(cast.2.name),$COMMA ,]$INFO[Container(99950).ListItem.Property(cast.3.name),$COMMA ,]$INFO[Container(99950).ListItem.Property(cast.4.name),$COMMA ,]$INFO[Container(99950).ListItem.Property(cast.5.name), $LOCALIZE[31150] ] $LOCALIZE[31545].</value>
@@ -1544,7 +1534,8 @@
     </variable>
 	
     <!-- Bingie More Details Image (pseudo-random) -->
-    <variable name="BingieMoreDetailsImage">		
+    <variable name="BingieMoreDetailsImage">
+		<value condition="Window.IsActive(1120) + !String.IsEmpty(ListItem.Title) + !String.Contains(ListItem.Title, next page>>>)">tags</value>
         <value condition="Integer.IsLessOrEqual(System.Time(ss),15) + !String.IsEmpty(Container(99950).ListItem.Property(Awards))">awards</value>       
         <value condition="Integer.IsLessOrEqual(System.Time(ss),30) + !String.IsEmpty(Container(99950).ListItem.Director) + !String.IsEmpty(Container(99950).ListItem.Cast) + $EXP[IsMovieDBType]">director</value>	
 		<value condition="Integer.IsLessOrEqual(System.Time(ss),30) + !String.IsEmpty(Container(99950).ListItem.Property(Network.1.name)) + !String.IsEmpty(Container(99950).ListItem.Cast) + !$EXP[IsMovieDBType]">director</value>
@@ -1597,6 +1588,17 @@
 		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, collision)">AEW Collision is a weekly professional wrestling TV program. It is produced by All Elite Wrestling and airs every Saturday night from 8-10pm on TNT in the US.</value>
         <value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, dynamite)">AEW Dynamite is a weekly professional wrestling TV program. It is produced by All Elite Wrestling and airs every Wednesday night from 8-10pm on TBS and Max in the US.</value>
 		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + !String.Contains(ListItem.Title, dynamite) + !String.Contains(ListItem.Title, collision)">AEW PPVs and specials are premium events that usually air live on selected weekends. They feature championship matches, major storylines and are the hightlight of AEW.</value>		
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, raw)">WWE Raw is a weekly professional wrestling TV program. It is produced by World Wrestling Entertainment and airs every Monday night at 8 on Netflix.</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, smackdown)">WWE SmackDown is a weekly professional wrestling TV program. It is produced by World Wrestling Entertainment airing every Friday night at 8 on Netflix and USA Network.</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, lfg)">WWE LFG is a competition series where rising talent known as "Future Greats" compete for a WWE contract while being mentored by WWE Hall of Famers and veterans.</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, greatest moments)">WWE's Greatest Moments chronicles iconic events in WWE history through the recollections and perspectives of WWE Superstars and Legends.</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, main event) + !String.Contains(ListItem.Title, saturday)">WWE Main Event features WWE wrestlers and complements WWE's primary programs Raw and SmackDown.</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, main event) + String.Contains(ListItem.Title, saturday)">WWE Saturday Night's Main Event is a series of American professional wrestling television specials produced by the WWE.</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, evolve)">WWE Evolve showcases in-ring action featuring rising WWE prospects as they look to make it to NXT, SmackDown & Raw.</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, nxt -)">WWE NXT is a weekly professional wrestling TV program. It is produced by World Wrestling Entertainment and airs every Tuesday night at 8 on Netflix.</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, nxt) + !String.Contains(ListItem.Title, nxt -)">NXT PPVs and specials are premium events that usually air live on selected weekends. They feature championship matches, major storylines and are the hightlight of NXT.</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + !String.Contains(ListItem.Title, -) + String.Contains(ListItem.Title, 2025)">WWE PPVs and specials are premium events that usually air live on selected weekends. They feature championship matches, major storylines and are the hightlight of WWE.</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, -) + String.Contains(ListItem.Title, 2025)">WWE PPVs and specials are premium events that usually air live on selected weekends. They feature championship matches, major storylines and are the hightlight of WWE.</value>
 		<!-- spotlight widget (inside container) -->
         <value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
         <value condition="!String.IsEmpty(ListItem.Property(Plot))">$INFO[ListItem.Property(Plot)]</value>

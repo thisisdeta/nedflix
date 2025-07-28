@@ -369,10 +369,13 @@
 		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, smackdown)">special://skin/media//smackdown001.jpg</value>	
 		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, main event) + !String.Contains(ListItem.Title, saturday)">special://skin/media//mainevent001.jpg</value>
 		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, main event) + String.Contains(ListItem.Title, saturday)">special://skin/media//SNmainevent001.jpg</value>
-		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, nxt)">special://skin/media//nxt001.jpg</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, nxt -)">special://skin/media//nxt001.jpg</value>
 		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, evolve)">special://skin/media//evolve001.jpg</value>
 		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, lfg)">special://skin/media//lfg001.jpg</value>
 		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, greatest moments)">special://skin/media//greatestmoments001.jpg</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, nxt) + !String.Contains(ListItem.Title, nxt -)">special://skin/media//nxtppv001.jpg</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + !String.Contains(ListItem.Title, -) + String.Contains(ListItem.Title, 2025)">special://skin/media//wweppv001.jpg</value>
+		<value condition="Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, -) + String.Contains(ListItem.Title, 2025)">special://skin/media//wweppv001.jpg</value>
 		<!-- pvr -->
 		<value condition="!String.IsEmpty(Container(99950).ListItem.Art(fanart)) + [Window.IsActive(tvchannels) | Window.IsActive(tvguide) | Window.IsActive(tvrecordings) | Window.IsActive(tvtimers) | Window.IsActive(tvsearch)]">$INFO[Container(99950).ListItem.Art(fanart)]</value> 
 		<!-- extra fanart -->

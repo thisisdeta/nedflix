@@ -240,6 +240,22 @@
 	</variable>
 	
 	<variable name="mediaflags_test_UK_icons">
+  <!-- Wrestling -->
+  <value condition='Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, collision)'>flags/flags_color/mpaa/bbfc_15_certificate_uk.png</value>
+  <value condition='Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + String.Contains(ListItem.Title, dynamite)'>flags/flags_color/mpaa/bbfc_15_certificate_uk.png</value>
+  <value condition='Window.IsActive(1120) + String.Contains(ListItem.Title, aew) + !String.Contains(ListItem.Title, dynamite) + !String.Contains(ListItem.Title, collision)'>flags/flags_color/mpaa/bbfc_18_certificate_uk.png</value>
+  <value condition='Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, raw)'>flags/flags_color/mpaa/bbfc_12_certificate_uk.png</value>
+  <value condition='Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, smackdown)'>flags/flags_color/mpaa/bbfc_12_certificate_uk.png</value>
+  <value condition='Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, main event) + !String.Contains(ListItem.Title, saturday)'>flags/flags_color/mpaa/bbfc_pg_certificate_uk.png</value>
+  <value condition='Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, evolve)'>flags/flags_color/mpaa/bbfc_pg_certificate_uk.png</value>
+  <value condition='Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, nxt -)'>flags/flags_color/mpaa/bbfc_12_certificate_uk.png</value>
+  <value condition='Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, main event) + String.Contains(ListItem.Title, saturday)'>flags/flags_color/mpaa/bbfc_12_certificate_uk.png</value>
+  <value condition='Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, nxt) + !String.Contains(ListItem.Title, nxt -)'>flags/flags_color/mpaa/bbfc_12_certificate_uk.png</value>
+  <value condition='Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, greatest moments)'>flags/flags_color/mpaa/bbfc_pg_certificate_uk.png</value>
+  <value condition='Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, lfg)'>flags/flags_color/mpaa/bbfc_12_certificate_uk.png</value>
+  <value condition='Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + !String.Contains(ListItem.Title, -) + String.Contains(ListItem.Title, 2025) + !String.Contains(ListItem.Title, main event) + !String.Contains(ListItem.Title, nxt)'>flags/flags_color/mpaa/bbfc_15_certificate_uk.png</value>
+  <value condition='Window.IsActive(1120) + String.Contains(ListItem.Title, wwe) + String.Contains(ListItem.Title, -) + String.Contains(ListItem.Title, 2025) + !String.Contains(ListItem.Title, main event) + !String.Contains(ListItem.Title, nxt) + !String.Contains(ListItem.Title, raw) + !String.Contains(ListItem.Title, smackdown) + !String.Contains(ListItem.Title, evolve)'>flags/flags_color/mpaa/bbfc_15_certificate_uk.png</value>
+    
   <!-- UK “U” -->
   <value condition='
     String.Contains(ListItem.mpaa,"UK:U")   |

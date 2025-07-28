@@ -1854,9 +1854,7 @@
 								<onclick>SetProperty(FadeFanart,1,Home)</onclick>
 								<onclick>SetProperty(NoFadeOut,1,Home)</onclick>
 								<onclick>SetProperty(AnimationRight,1,Home)</onclick>
-								<onclick condition="!String.IsEmpty(Window(Home).Property(FullImage))">
-									SetProperty(EpisodesAnimation,1,Home)
-								</onclick>
+								<onclick condition="!String.IsEmpty(Window(Home).Property(FullImage))">SetProperty(EpisodesAnimation,1,Home)</onclick>
 								<onclick>Dialog.Close(movieinformation)</onclick>
 
 								<!-- Fen Light using tmdb_id -->

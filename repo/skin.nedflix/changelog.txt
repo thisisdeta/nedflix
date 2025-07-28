@@ -1,3 +1,8 @@
+Version 1.0.9
+
+- Changed bingie_splash to Nedflix logo
+- Added more details for AEW and WWE events in the wrestling hub
+
 Version 1.0.8
 
 - You can now enable or disable the clock on it's own on the OSD
@@ -11,7 +16,7 @@ Version 1.0.8
 - StepBack and StepForward now work when the OSD is open on the pause button
 - More options are now shown on the video information page without having to scroll
 - Now when pressing back on 'reviews & critics' it goes back to video info instead of closing
-- Added custom art and details for AEW events in the wrestling hub
+- Added custom art and details for AEW and WWE events in the wrestling hub
 
 Version 1.0.7
 
