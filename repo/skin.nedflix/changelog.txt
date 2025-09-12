@@ -1,3 +1,7 @@
+Version 1.1.0
+
+- Enabled all bingie views for all types of window
+
 Version 1.0.9
 
 - Changed bingie_splash to Nedflix logo
