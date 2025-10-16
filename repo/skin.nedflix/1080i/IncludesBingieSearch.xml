@@ -20,7 +20,7 @@
     </variable>
 	
 	<variable name="SearchTMDBShows">
-        <value condition="!String.IsEmpty(Skin.String(CustomSearchTerm))">plugin://plugin.video.fenlight/?mode=build_tvshow_list&action=tmdb_tv_search&query=$INFO[Skin.String(CustomSearchTerm)]</value>       
+        <value condition="!String.IsEmpty(Skin.String(CustomSearchTerm))">plugin://plugin.video.fenlight/?mode=build_tvshow_list&action=trakt_tv_search&query=$INFO[Skin.String(CustomSearchTerm)]</value>       
     </variable>
 	
 	<variable name="SearchTMDBPeople">
