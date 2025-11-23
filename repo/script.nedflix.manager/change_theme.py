@@ -25,6 +25,7 @@ def change_theme():
         ("Purple (GOG)",                    "home/bingie_logo_purple2.png",             "6900d1"),
         ("Dedflix",                         "home/bingie_logo_dedflix.png",             "c20c0c"),
         ("Dedflix (Orange)",                "home/bingie_logo_dedflix2.png",            "fb7e07"),
+        ("Sledflix",                        "home/bingie_logo_sledflix.png",            "e8372d"),
         ("Nedflix",                         "home/bingie_logo_nedflix.png",             "1ed760")
     ]
     

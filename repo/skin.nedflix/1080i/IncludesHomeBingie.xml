@@ -817,7 +817,7 @@
 				<height>165</height>
 				<align>right</align>
 				<aspectratio align="right">keep</aspectratio>
-				<texture>home/bingie_logo_nedflix.png</texture>
+				<texture>home/bingie_logo_sledflix.png</texture>
 			</control>
 			
 			<control type="image">
@@ -829,7 +829,7 @@
 				<height>165</height>
 				<align>right</align>
 				<aspectratio align="right">keep</aspectratio>
-				<texture>home/bingie_logo_nedflix.png</texture>
+				<texture>home/bingie_logo_sledflix.png</texture>
 			</control>
 
 			<control type="grouplist">
@@ -844,7 +844,7 @@
 			<control type="image">
 				<width>9</width>
 				<height>40</height>
-				<texture background="true" colordiffuse="ff1ed760">bingie/line.png</texture>
+				<texture background="true" colordiffuse="ffe8372d">bingie/line.png</texture>
 			</control>
 			<control type="label">
 				<width>auto</width>

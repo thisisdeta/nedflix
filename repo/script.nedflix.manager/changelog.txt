@@ -1,3 +1,7 @@
+Version 1.0.6
+
+- Added SledFlix theme
+
 Version 1.0.5
 
 - Moved widget functions into their own sub-menu

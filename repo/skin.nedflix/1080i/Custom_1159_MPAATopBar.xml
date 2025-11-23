@@ -33,7 +33,7 @@
                     <width>6</width>
                     <height>6</height>
                     <texture>diffuse/panel2.png</texture>
-                    <colordiffuse>FF1ED760</colordiffuse>
+                    <colordiffuse>FFE8372D</colordiffuse>
                     <aspectratio>stretch</aspectratio>
                 </control>
 				  <control type="label">
