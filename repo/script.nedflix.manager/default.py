@@ -274,7 +274,7 @@ def widgets_main_menu():
 def main_menu():
     options = [
         "Change Theme",
-        "Change Splash Screen",
+        "Change Splash Screens",
         "Manage Widgets",        
         "Change Wrestling Widgets Size",  
         "Save and Refresh (Home Widgets)",

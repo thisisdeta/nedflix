@@ -16,11 +16,14 @@ def apply_splash(screen_name_png):
     source_splash = os.path.join(addon_path, 'media', 'kodi_splash_screens', screen_name_png)
     dest_splash = xbmcvfs.translatePath('special://home/media/splash.png')
 
-    # Bingie splash source (jpg) — same basename as the selected png, but with .jpg extension
+    # Bingie splash source (jpg)
     base_name = os.path.splitext(screen_name_png)[0]
     bingie_file = base_name + '.jpg'
     source_bingie = os.path.join(addon_path, 'media', 'bingie_settings_splash_screens', bingie_file)
     dest_bingie = xbmcvfs.translatePath('special://home/addons/skin.nedflix/extras/media/backgrounds/settings_bingie.jpg')
+
+    # NEW: copy PNG to bingie_splash.png
+    dest_bingie_png = xbmcvfs.translatePath('special://home/addons/skin.nedflix/extras/media/bingie_splash.png')
 
     if not xbmcvfs.exists(source_splash):
         xbmcgui.Dialog().notification('Splash Screen', 'Selected splash image for Kodi not found!', xbmcgui.NOTIFICATION_ERROR)
@@ -41,9 +44,15 @@ def apply_splash(screen_name_png):
             xbmcvfs.delete(dest_bingie)
         xbmcvfs.copy(source_bingie, dest_bingie)
 
+        # NEW: Copy PNG to bingie_splash.png
+        if xbmcvfs.exists(dest_bingie_png):
+            xbmcvfs.delete(dest_bingie_png)
+        xbmcvfs.copy(source_splash, dest_bingie_png)
+
         xbmcgui.Dialog().notification('Woohoo!', 'Splash screen changed!', icon=icon_path)
     except Exception as e:
         xbmcgui.Dialog().notification('Error', str(e), xbmcgui.NOTIFICATION_ERROR)
+
 
 def choose_splash_screen():
     addon = xbmcaddon.Addon()

@@ -1,3 +1,8 @@
+Version 1.0.7
+
+- Added SledFlix theme with black background
+- Now when setting a new splash screen, both splash screens are changed
+
 Version 1.0.6
 
 - Added SledFlix theme

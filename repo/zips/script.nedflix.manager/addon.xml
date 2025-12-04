@@ -1,4 +1,4 @@
-<addon id="script.nedflix.manager" version="1.0.6" name="Nedflix Manager" provider-name="ChatGPDeta">
+<addon id="script.nedflix.manager" version="1.0.7" name="Nedflix Manager" provider-name="ChatGPDeta">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
     </requires>
